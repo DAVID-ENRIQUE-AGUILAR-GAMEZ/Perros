@@ -1,4 +1,43 @@
-<p>
-  accesorios works!
-</p>
-
+<div class="jumbotron imaPrincipal sombrabottom">
+  <h1>Happy Doggie</h1>
+  <p>Llevatelos ahora </p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 center ">
+      <h1>Agregar mas Perros al Catalogo</h1>
+    </div>
+  </div>
+  <hr>
+  
+    <div class="form-group">
+      <label class="control-label col-sm-2">Nombre (Raza):</label>
+      <div class="col-sm-10">
+        <input type="email" [(ngModel)]="addDog.nombre" class="form-control" placeholder="Raza">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Descripcion:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control " [(ngModel)]="addDog.descripcion" rows="7"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Precio:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control " [(ngModel)]="addDog.precio"  placeholder="Precio $$$$">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Imagen</label>
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="text" class="form-control " [(ngModel)]="addDog.imagen" placeholder="Imagen">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="btn btn-default" (click)= "agregarPrro()">Agregar</button>
+      </div>
+    </div>
+  
+</div>

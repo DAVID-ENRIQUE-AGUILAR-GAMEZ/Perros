@@ -7,6 +7,7 @@ import { AccesoriosComponent } from './accesorios/accesorios.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ElperroComponent } from './elperro/elperro.component';
+import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "catalogo", component: CatalogoComponent },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,27 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PERROS } from '../perrosCatalog';
 import { element } from 'protractor';
+import { PerrosService } from '../perros.service';
 @Component({
   selector: 'app-elperro',
   templateUrl: './elperro.component.html',
   styleUrls: ['./elperro.component.css']
 })
 export class ElperroComponent implements OnInit {
-
+  auxPerro = [];
   dogNam;
   dogDesc;
   dogPrice;
   dogImg;
-  canes = PERROS;
+  // canes = PERROS;
   id: number;
-  bandera: boolean;
-  constructor(public activatedRoute: ActivatedRoute) {
+  bandera: boolean = false;
+  constructor(public activatedRoute: ActivatedRoute, public perrosService: PerrosService) {
+    this.auxPerro = perrosService.getPerros();
     this.id = this.activatedRoute.snapshot.params['id'];
+    // console.log("hola ", this.auxPerro);
     console.log(this.id);
   }
   auxPerroArray() {
-    console.log(this.canes);
-    this.canes.forEach((elemento, index) => {
+    // console.log(this.canes);
+    this.auxPerro.forEach((elemento, index) => {
       if (index == this.id) {
         this.dogNam = elemento.nombre;
         this.dogDesc = elemento.descripcion;
@@ -33,14 +36,16 @@ export class ElperroComponent implements OnInit {
 
     });
   }
-  prueba() {
-    console.log(this.dogPrice);
-  }
+  // prueba() {
+  //   console.log(this.dogPrice);
+  // }
   compra() {
     this.bandera = true;
+    alert("Has comprado un "+this.dogNam);
   }
   ngOnInit() {
-    this.auxPerroArray();
+    console.log(this.bandera);
+    this.auxPerroArray();   
   }
 
 }
