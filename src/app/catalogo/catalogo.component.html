@@ -1,0 +1,36 @@
+<div class="jumbotron imaPrincipal sombrabottom">
+  <h1>Happy Doggie</h1>
+  <p>Perritos a la venta </p>
+</div>
+<div class="container">
+  <h1>Catálogo de perros</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-3 center" *ngFor="let can of perros;let i = index">
+      <div class="row">
+        <div class="col-12">
+          <h3>{{can.nombre}}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 " >
+          <img src="{{can.imagen}}" class="sombraImagen imgCatalog">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <strong>Precio: ${{can.precio}}</strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <small>Descripción: {{can.descripcion}}</small>
+        </div>
+      </div>
+      <div class="row margenAbajo">
+        <div class="col-12">
+          <button type="button" class="sombraImagen btn btn-dark btnLargo " (click)="navegarPerros(i)">ver</button>
+        </div>
+      </div>
+    </div>
+  </div>

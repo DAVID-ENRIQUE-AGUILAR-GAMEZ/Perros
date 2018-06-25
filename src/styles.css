@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+.iconNav{
+    color: red;
+    margin-right: 50px; 
+}
+.imaPrincipal{
+    background-image: url("assets/bgPerros.png");
+    background-repeat: no-repeat, repeat;
+    image-rendering: auto;
+}
+.imagenBanner{
+    width: 100%;
+    height: 100%;
+}
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    /* margin-left: auto; margin-right: auto; */
+}
+.margen{
+    margin: 0;
+}
+.center{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+.noMargen{
+    margin: 0;
+}
+.colorVerde{
+background: green;
+}
+
+.coloAzul{
+    background: blue;
+}
+.colorRojo{
+    background: red;
+}
+.colorAmarillo{
+    background: yellow;
+}
+.colorBlanco{
+    color: white;
+}
+.imgCatalog{
+    width:260px;
+    height:320px;
+    border-radius: 11px;
+}
+.imaPerro{
+    width:500px;
+    height:500px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px
+}
+.imaCarruse{
+    height: 320px;
+    width: 100%;
+}
+.sombrabottom{
+    -webkit-box-shadow: 0px 17px 84px -20px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 17px 84px -20px rgba(0,0,0,0.75);
+box-shadow: 0px 17px 84px -20px rgba(0,0,0,0.75);
+}
+.sombraImagen{
+    -webkit-box-shadow: 2px 10px 56px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 10px 56px -16px rgba(0,0,0,0.75);
+    box-shadow: 2px 10px 56px -16px rgba(0,0,0,0.75);}
+
+.btnLargo{
+width: 100%;
+}
+.margenAbajo{
+margin-bottom: 30px;
+}
+
+.bgArt{
+background-color:black;
+width: 500px;
+border-bottom-left-radius: 11px;
+border-bottom-right-radius: 11px;
+}
+.btnCom{
+ width: 500px;
+ height: 50px;
+}
